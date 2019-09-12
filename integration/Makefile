@@ -7,7 +7,7 @@ export IMAGE
 export GO111MODULE=on
 
 .PHONY: run
-run: build postgres mysql
+run: build postgres mysql cockroach
 
 .PHONY: postgres
 postgres:
@@ -36,6 +36,20 @@ mysql:
 	make -C tests/mysql/index-create run
 	make -C tests/mysql/primary-key-add run
 	make -C tests/mysql/primary-key-drop run
+
+.PHONY: cockroach
+cockroach:
+	make -C tests/cockroach run TEST_NAME=column-set-default
+	make -C tests/cockroach run TEST_NAME=column-unset-default
+	make -C tests/cockroach run TEST_NAME=create-table
+	make -C tests/cockroach run TEST_NAME=foreign-key-create
+	make -C tests/cockroach run TEST_NAME=foreign-key-action
+	make -C tests/cockroach run TEST_NAME=foreign-key-drop
+	make -C tests/cockroach run TEST_NAME=foreign-key-alter
+	make -C tests/cockroach run TEST_NAME=not-null
+	make -C tests/cockroach run TEST_NAME=index-create
+	make -C tests/cockroach run TEST_NAME=primary-key-add
+	make -C tests/cockroach run TEST_NAME=primary-key-drop
 
 .PHONY: build
 build: docker-build

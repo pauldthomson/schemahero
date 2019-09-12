@@ -14,9 +14,17 @@ steps:
 
   - wait
 
-  - label: integration-tests
+  - label: integration-tests-postgres
     commands:
-      - make -C integration run
+      - make -C integration build postgres
+
+  - label: integration-tests-mysql
+    commands:
+      - make -C integration build mysql
+
+  - label: integration-tests-cockroach
+    commands:
+      - make -C integration build cockroach
 
   - wait
 
