@@ -18,7 +18,7 @@ SchemaHero is a Kubernetes Operator for [Declarative Schema Management](https://
 
 ## Getting Started
 
-The recommended way to deploy SchemaHero is:
+The recommended way to deploy SchemaHero is to:
 
 ```
 kubectl apply -f https://git.io/schemahero
