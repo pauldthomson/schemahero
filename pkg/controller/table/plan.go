@@ -19,6 +19,7 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/client-go/kubernetes"
 	"sigs.k8s.io/controller-runtime/pkg/client/config"
+	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 )
 
@@ -113,13 +114,20 @@ func (r *ReconcileTable) reconcilePod(pod *corev1.Pod) (reconcile.Result, error)
 			Namespace: table.Namespace,
 		},
 		Spec: schemasv1alpha3.MigrationSpec{
-			GeneratedDDL:   out,
+			GeneratedDDL: out,
+
 			TableName:      table.Name,
 			TableNamespace: table.Namespace,
+
+			DatabaseName: table.Spec.Database,
 		},
 		Status: schemasv1alpha3.MigrationStatus{
 			PlannedAt: time.Now().Unix(),
 		},
+	}
+
+	if err := controllerutil.SetControllerReference(table, &migration, r.scheme); err != nil {
+		return reconcile.Result{}, errors.Wrap(err, "failed to set owner ref of migration")
 	}
 
 	if err := r.Create(context.Background(), &migration); err != nil {

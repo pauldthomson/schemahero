@@ -24,8 +24,11 @@ import (
 type MigrationSpec struct {
 	TableName      string `json:"tableName"`
 	TableNamespace string `json:"tableNamespace"`
-	GeneratedDDL   string `json:"generatedDDL,omitempty"`
-	EditedDDL      string `json:"editedDDL,omitempty"`
+
+	DatabaseName string `json:"databaseName"`
+
+	GeneratedDDL string `json:"generatedDDL,omitempty"`
+	EditedDDL    string `json:"editedDDL,omitempty"`
 }
 
 // MigrationStatus defines the observed state of Migration
@@ -47,6 +50,8 @@ type MigrationStatus struct {
 
 // Migration is the Schema for the migrations API
 // +k8s:openapi-gen=true
+// +kubebuilder:printcolumn:name="Database",type=string,JSONPath=`.spec.databaseName`
+// +kubebuilder:printcolumn:name="Table",type="string",JSONPath=`.spec.tableName`
 type Migration struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`

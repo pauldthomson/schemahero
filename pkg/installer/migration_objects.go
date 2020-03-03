@@ -10,6 +10,13 @@ metadata:
   creationTimestamp: null
   name: migrations.schemas.schemahero.io
 spec:
+  additionalPrinterColumns:
+  - JSONPath: .spec.databaseName
+    name: Database
+    type: string
+  - JSONPath: .spec.tableName
+    name: Table
+    type: string
   group: schemas.schemahero.io
   names:
     kind: Migration
@@ -17,6 +24,7 @@ spec:
     plural: migrations
     singular: migration
   scope: Namespaced
+  subresources: {}
   validation:
     openAPIV3Schema:
       description: Migration is the Schema for the migrations API
@@ -36,6 +44,8 @@ spec:
         spec:
           description: MigrationSpec defines the desired state of Migration
           properties:
+            databaseName:
+              type: string
             editedDDL:
               type: string
             generatedDDL:
@@ -45,6 +55,7 @@ spec:
             tableNamespace:
               type: string
           required:
+          - databaseName
           - tableName
           - tableNamespace
           type: object
@@ -102,7 +113,14 @@ spec:
     singular: migration
   scope: Namespaced
   versions:
-  - name: v1alpha3
+  - additionalPrinterColumns:
+    - jsonPath: .spec.databaseName
+      name: Database
+      type: string
+    - jsonPath: .spec.tableName
+      name: Table
+      type: string
+    name: v1alpha3
     schema:
       openAPIV3Schema:
         description: Migration is the Schema for the migrations API
@@ -122,6 +140,8 @@ spec:
           spec:
             description: MigrationSpec defines the desired state of Migration
             properties:
+              databaseName:
+                type: string
               editedDDL:
                 type: string
               generatedDDL:
@@ -131,6 +151,7 @@ spec:
               tableNamespace:
                 type: string
             required:
+            - databaseName
             - tableName
             - tableNamespace
             type: object
@@ -160,6 +181,7 @@ spec:
         type: object
     served: true
     storage: true
+    subresources: {}
 status:
   acceptedNames:
     kind: ""
