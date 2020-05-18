@@ -108,6 +108,8 @@ generate: controller-gen client-gen
 
 .PHONY: bin/schemahero
 bin/schemahero:
+	GOOS=linux \
+	GOARCH=amd64 \
 	go build \
 		${LDFLAGS} \
 		-i \
