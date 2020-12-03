@@ -104,7 +104,7 @@ func RunCmd() *cobra.Command {
 
 	cmd.Flags().Bool("enable-database-controller", false, "when set, the database controller will be active")
 	cmd.Flags().StringSlice("database-name", []string{}, "when present (and not set to *), the controller will reconcile tables and migrations for the specified database")
-	cmd.Flags().String("manager-image", "schemahero/schemahero-manager", "the schemahero manager image to use in the controller")
+	cmd.Flags().String("manager-image", "016192371793.dkr.ecr.ap-southeast-2.amazonaws.com/schemahero-manager", "the schemahero manager image to use in the controller")
 	cmd.Flags().String("manager-tag", defaultManagerTag(), "the tag of the schemahero manager image to use")
 	cmd.Flags().String("namespace", "", "when set, limit rbac permissions for watches to this namespace")
 

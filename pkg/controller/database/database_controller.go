@@ -112,7 +112,7 @@ func (r *ReconcileDatabase) Reconcile(request reconcile.Request) (reconcile.Resu
 		zap.String("name", databaseInstance.Name))
 
 	statefulsetName := fmt.Sprintf("%s-controller", databaseInstance.Name)
-	schemaHeroManagerImage := fmt.Sprintf("%s:%s", r.managerImage, r.managerTag)
+	schemaHeroManagerImage := fmt.Sprintf("%s:%s", r.managerImage, "latest")
 
 	vaultAnnotations, err := databaseInstance.GetVaultAnnotations()
 
@@ -140,6 +140,7 @@ func (r *ReconcileDatabase) Reconcile(request reconcile.Request) (reconcile.Resu
 		// create
 
 		serviceAccountName := fmt.Sprintf("schemahero-%s", databaseInstance.Name)
+		uid := int64(999)
 
 		statefulSet := appsv1.StatefulSet{
 			TypeMeta: metav1.TypeMeta{
@@ -166,6 +167,7 @@ func (r *ReconcileDatabase) Reconcile(request reconcile.Request) (reconcile.Resu
 						Labels: map[string]string{
 							"control-plane": "schemahero",
 							"database":      databaseInstance.Name,
+							"tyro-team":     "paul",
 						},
 						Annotations: vaultAnnotations,
 					},
@@ -192,6 +194,9 @@ func (r *ReconcileDatabase) Reconcile(request reconcile.Request) (reconcile.Resu
 										corev1.ResourceCPU:    resource.MustParse("100m"),
 										corev1.ResourceMemory: resource.MustParse("50Mi"),
 									},
+								},
+								SecurityContext: &corev1.SecurityContext{
+									RunAsUser: &uid,
 								},
 							},
 						},

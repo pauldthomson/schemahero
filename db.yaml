@@ -1,0 +1,19 @@
+apiVersion: databases.schemahero.io/v1alpha4
+kind: Database
+metadata:
+  name: payments-1-cluster
+  namespace: payments
+spec:
+  connection:
+    mysql:
+      uri:
+        valueFrom:
+          vault:
+            endpoint: https://vault.dev.tyro.cloud
+            serviceAccount: trading-location-config-db-migration
+            serviceAccountNamespace: payments
+            # for secret path: businessunit-database-role
+            secret: payments-payments-1-cluster-trading-location-config-schema-migration-role
+            # auth to vault/k8s-role: businessunit-namespace-serviceAccount
+            # vault.hashicorp.com/role
+            role: payments-payments-trading-location-config-db-migration

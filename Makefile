@@ -50,6 +50,9 @@ manager: generate fmt vet bin/manager
 
 .PHONY: bin/manager
 bin/manager:
+	GOOS=linux \
+	GOARCH=amd64 \
+	CGO_DISABLED=true \
 	go build \
 		${LDFLAGS} \
 		-i \
@@ -117,6 +120,9 @@ generate: controller-gen client-gen
 
 .PHONY: bin/kubectl-schemahero
 bin/kubectl-schemahero:
+	GOOS=linux \
+	GOARCH=amd64 \
+	CGO_DISABLED=true \
 	go build \
 		${LDFLAGS} \
 		-i \
@@ -129,6 +135,12 @@ microk8s: bin/kubectl-schemahero manager
 	docker build -t schemahero/schemahero-manager -f ./Dockerfile.manager .
 	docker tag schemahero/schemahero-manager localhost:32000/schemahero/schemahero-manager:latest
 	docker push localhost:32000/schemahero/schemahero-manager:latest
+
+.PHONY: tap-dev
+tap-dev: bin/kubectl-schemahero manager
+	docker build -t schemahero/schemahero-manager -f ./Dockerfile.manager .
+	docker tag schemahero/schemahero-manager  016192371793.dkr.ecr.ap-southeast-2.amazonaws.com/schemahero-manager:latest
+	docker push 016192371793.dkr.ecr.ap-southeast-2.amazonaws.com/schemahero-manager:latest
 
 .PHONY: kind
 kind: bin/kubectl-schemahero manager

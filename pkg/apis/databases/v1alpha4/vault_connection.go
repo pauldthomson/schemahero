@@ -137,7 +137,8 @@ func (d *Database) getVaultConnection(ctx context.Context, clientset *kubernetes
 		return "", "", errors.Wrap(err, "failed to unmarshal response")
 	}
 
-	req, err = http.NewRequest("GET", fmt.Sprintf("%s/v1/database/config/%s", valueOrValueFrom.ValueFrom.Vault.Endpoint, d.Name), nil)
+	dbconf := fmt.Sprintf("%s_%s", d.Namespace, d.Name)
+	req, err = http.NewRequest("GET", fmt.Sprintf("%s/v1/database/config/%s", valueOrValueFrom.ValueFrom.Vault.Endpoint, dbconf), nil)
 	if err != nil {
 		return "", "", errors.Wrap(err, "failed to create request")
 	}
@@ -181,8 +182,9 @@ func (d *Database) getVaultConnection(ctx context.Context, clientset *kubernetes
 		return credsResponse.Data["password"].(string)
 	}
 
+	newConnURL := configResponse.Data.ConnectionDetails.ConnectionURL + "trading_location_config"
 	// with the connection url and the username and password (context), we can build a connection string
-	t := template.Must(template.New(fmt.Sprintf("%s/%s/%s", d.Namespace, d.Name, d.ResourceVersion)).Funcs(funcMap).Parse(configResponse.Data.ConnectionDetails.ConnectionURL))
+	t := template.Must(template.New(fmt.Sprintf("%s/%s/%s", d.Namespace, d.Name, d.ResourceVersion)).Funcs(funcMap).Parse(newConnURL))
 	var connectionURI bytes.Buffer
 	if err := t.Execute(&connectionURI, credsResponse.Data); err != nil {
 		return "", "", errors.Wrap(err, "failed to render vault connection template")
