@@ -118,6 +118,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -205,6 +207,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -292,6 +296,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -385,6 +391,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -472,6 +480,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -559,6 +569,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -646,6 +658,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -733,6 +747,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -820,6 +836,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -907,6 +925,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -999,6 +1019,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -1090,6 +1112,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -1177,6 +1201,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -1264,6 +1290,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -1351,6 +1379,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -1438,6 +1468,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -1528,6 +1560,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -1615,6 +1649,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -1702,6 +1738,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -1789,6 +1827,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -1876,6 +1916,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -1963,6 +2005,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -2050,6 +2094,8 @@ spec:
                               properties:
                                 agentInject:
                                   type: boolean
+                                connectionTemplate:
+                                  type: string
                                 endpoint:
                                   type: string
                                 role:
@@ -2233,6 +2279,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -2320,6 +2368,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -2407,6 +2457,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -2500,6 +2552,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -2587,6 +2641,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -2674,6 +2730,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -2761,6 +2819,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -2848,6 +2908,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -2935,6 +2997,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -3022,6 +3086,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -3114,6 +3180,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -3205,6 +3273,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -3292,6 +3362,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -3379,6 +3451,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -3466,6 +3540,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -3553,6 +3629,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -3643,6 +3721,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -3730,6 +3810,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -3817,6 +3899,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -3904,6 +3988,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -3991,6 +4077,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -4078,6 +4166,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
@@ -4165,6 +4255,8 @@ spec:
                                 properties:
                                   agentInject:
                                     type: boolean
+                                  connectionTemplate:
+                                    type: string
                                   endpoint:
                                     type: string
                                   role:
