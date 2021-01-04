@@ -136,7 +136,6 @@ func (d *Database) getVaultConnection(ctx context.Context, clientset kubernetes.
 	if err := json.Unmarshal(b, &credsResponse); err != nil {
 		return "", "", errors.Wrap(err, "failed to unmarshal response")
 	}
-	fmt.Printf("body: %v\n", &credsResponse)
 
 	uriTemplate, err := getConnectionURITemplate(valueOrValueFrom.ValueFrom.Vault, loginResponse.Auth.ClientToken, d.Name)
 
@@ -158,6 +157,7 @@ func (d *Database) getVaultConnection(ctx context.Context, clientset kubernetes.
 	return driver, connectionURI.String(), nil
 }
 
+// get the uri template from the DB spec if set, otherwise use DB config in Vault
 func getConnectionURITemplate(vault *Vault, token string, dbName string) (string, error) {
 	if vault.ConnectionTemplate != "" {
 		return vault.ConnectionTemplate, nil

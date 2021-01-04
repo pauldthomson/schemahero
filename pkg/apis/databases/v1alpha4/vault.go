@@ -86,30 +86,45 @@ func (d *Database) GetVaultAnnotations() (map[string]string, error) {
 		return nil, nil
 	}
 
-	t, err := d.getDbType()
+	db, err := d.getDbType()
 	if err != nil {
 		return nil, err
 	}
 
+	connTemplate := v.ConnectionTemplate
 	annotations := make(map[string]string)
 
-	switch t {
+	var t string
+	switch db {
 	case "postgres", "cockroachdb":
-		t := fmt.Sprintf(`
+		if connTemplate == "" {
+			t = fmt.Sprintf(`
 {{- with secret "database/creds/%s" -}}
 postgres://{{ .Data.username }}:{{ .Data.password }}@postgres:5432/%s{{- end }}`, v.Role, d.Name)
+		} else {
+			t = fmt.Sprintf(`
+{{- with secret "database/creds/%s" -}}
+%s`, v.Role, connTemplate)
+		}
 
 		annotations["vault.hashicorp.com/agent-inject-template-schemaherouri"] = t
+
 	case "mysql":
-		t := fmt.Sprintf(`
+		if connTemplate == "" {
+			t = fmt.Sprintf(`
 {{- with secret "database/creds/%s" -}}
 {{ .Data.username }}:{{ .Data.password }}@tcp(mysql:3306)/%s{{- end }}`, v.Role, d.Name)
+		} else {
+			t = fmt.Sprintf(`
+{{- with secret "database/creds/%s" -}}
+%s`, v.Role, connTemplate)
+		}
 
 		annotations["vault.hashicorp.com/agent-inject-template-schemaherouri"] = t
 	case "cassandra":
 		return nil, errors.New("not implemented")
 	default:
-		return nil, fmt.Errorf("unknown database driver: %q", t)
+		return nil, fmt.Errorf("unknown database driver: %q", db)
 	}
 
 	annotations["vault.hashicorp.com/agent-inject"] = "true"
