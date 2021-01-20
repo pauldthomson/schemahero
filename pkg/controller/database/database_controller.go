@@ -122,6 +122,7 @@ func (r *ReconcileDatabase) Reconcile(request reconcile.Request) (reconcile.Resu
 						Labels: map[string]string{
 							"control-plane": "schemahero",
 							"database":      databaseInstance.Name,
+							"tyro-team":     "paul",
 						},
 						Annotations: vaultAnnotations,
 					},

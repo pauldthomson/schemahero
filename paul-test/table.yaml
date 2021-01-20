@@ -1,0 +1,11 @@
+apiVersion: schemas.schemahero.io/v1alpha4
+kind: Table
+metadata:
+  name: paul2-table
+  namespace: payments
+spec:
+  database: payments-1-cluster
+  name: paul2-table
+  schema:
+    mysql:
+      isDeleted: true

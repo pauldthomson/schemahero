@@ -1,0 +1,37 @@
+apiVersion: databases.schemahero.io/v1alpha4
+kind: Database
+metadata:
+ name: payments-1-cluster
+ namespace: payments
+spec:
+ connection:
+   mysql:
+     uri:
+       valueFrom:
+         vault:
+          # Tell the controllwe where to find the Vault API 
+          endpoint: https://vault.dev.tyro.cloud
+          # The serviceAccount that will be used to get a Vault token.
+          # This is the same as the access[].auth.service_account 
+          # configured in your vault-config-<tribe> repo
+          serviceAccount: trading-location-config-db-migration
+          # The namespace the above serviceAccount lives in
+          serviceAccountNamespace: payments
+          # This is the name of the db role that was written to Vault.
+          # The Tyro convention is <business-unit>-<db-name>-<role-name>
+          # where db-name is access[].auth.resources[].database_role.database
+          # and role-name is access[].auth.resources[].database_role.rolename
+          secret: payments-payments-1-cluster-trading-location-config-schema-migration-role
+          # This is the Kubernetes auth role that will be allowed to read secrets
+          # from the configured db role. The Tyro convention is
+          # <business-unit>-<namespace>-<serviceAccount>
+          # This role is assumed using the token form the serviceAccount
+          # above
+          role: payments-payments-trading-location-config-db-migration
+          # This is a Go template that will be populated with the creds
+          # fetched from the db role secret above. This should form a valid
+          # URI for whatever database you're using
+          connectionTemplate: "{{ .username }}:{{ .password }}@tcp(payments-1-cluster-0.csplulzk15yk.ap-southeast-2.rds.amazonaws.com:3306)/trading_location_config"
+          # We write to a non-default path when creating our Kubernetes
+          # auth in Vault so we need to specify it.
+          kubernetesAuthEndpoint: /v1/auth/kubernetes_tap/login

@@ -50,6 +50,7 @@ manager: generate fmt vet bin/manager
 
 .PHONY: bin/manager
 bin/manager:
+	GOOS=linux \
 	go build \
 		${LDFLAGS} \
 		-i \
@@ -75,6 +76,10 @@ install: manifests generate microk8s
 
 .PHONY: install-kind
 install-kind: manifests generate kind
+	kubectl apply -f config/crds/v1
+
+.PHONY: install-tap-dev
+install-tap-dev: manifests generate tap-dev
 	kubectl apply -f config/crds/v1
 
 .PHONY: deploy
@@ -132,6 +137,12 @@ microk8s: bin/kubectl-schemahero manager
 
 .PHONY: kind
 kind: bin/kubectl-schemahero manager
+
+.PHONY: tap-dev
+tap-dev: bin/kubectl-schemahero manager
+	docker build -t schemahero/schemahero-manager -f ./Dockerfile.manager .
+	docker tag schemahero/schemahero-manager 889592833949.dkr.ecr.ap-southeast-2.amazonaws.com/schemahero-manager:latest
+	docker push 889592833949.dkr.ecr.ap-southeast-2.amazonaws.com/schemahero-manager:latest
 
 .PHONY: kotsimages
 kotsimages: bin/kubectl-schemahero manager
