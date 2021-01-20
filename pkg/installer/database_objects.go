@@ -120,6 +120,8 @@ spec:
                                   type: boolean
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -207,6 +209,8 @@ spec:
                                   type: boolean
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -293,6 +297,8 @@ spec:
                                 agentInject:
                                   type: boolean
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -387,6 +393,8 @@ spec:
                                   type: boolean
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -473,6 +481,8 @@ spec:
                                 agentInject:
                                   type: boolean
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -561,6 +571,8 @@ spec:
                                   type: boolean
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -647,6 +659,8 @@ spec:
                                 agentInject:
                                   type: boolean
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -735,6 +749,8 @@ spec:
                                   type: boolean
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -822,6 +838,8 @@ spec:
                                   type: boolean
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -908,6 +926,8 @@ spec:
                                 agentInject:
                                   type: boolean
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -1001,6 +1021,8 @@ spec:
                                   type: boolean
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -1092,6 +1114,8 @@ spec:
                                   type: boolean
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -1178,6 +1202,8 @@ spec:
                                 agentInject:
                                   type: boolean
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -1266,6 +1292,8 @@ spec:
                                   type: boolean
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -1353,6 +1381,8 @@ spec:
                                   type: boolean
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -1439,6 +1469,8 @@ spec:
                                 agentInject:
                                   type: boolean
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -1530,6 +1562,8 @@ spec:
                                   type: boolean
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -1616,6 +1650,8 @@ spec:
                                 agentInject:
                                   type: boolean
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -1704,6 +1740,8 @@ spec:
                                   type: boolean
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -1790,6 +1828,8 @@ spec:
                                 agentInject:
                                   type: boolean
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -1878,6 +1918,8 @@ spec:
                                   type: boolean
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -1965,6 +2007,8 @@ spec:
                                   type: boolean
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -2051,6 +2095,8 @@ spec:
                                 agentInject:
                                   type: boolean
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -2235,6 +2281,8 @@ spec:
                                     type: boolean
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -2322,6 +2370,8 @@ spec:
                                     type: boolean
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -2408,6 +2458,8 @@ spec:
                                   agentInject:
                                     type: boolean
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string
@@ -2502,6 +2554,8 @@ spec:
                                     type: boolean
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -2588,6 +2642,8 @@ spec:
                                   agentInject:
                                     type: boolean
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string
@@ -2676,6 +2732,8 @@ spec:
                                     type: boolean
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -2762,6 +2820,8 @@ spec:
                                   agentInject:
                                     type: boolean
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string
@@ -2850,6 +2910,8 @@ spec:
                                     type: boolean
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -2937,6 +2999,8 @@ spec:
                                     type: boolean
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -3023,6 +3087,8 @@ spec:
                                   agentInject:
                                     type: boolean
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string
@@ -3116,6 +3182,8 @@ spec:
                                     type: boolean
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -3207,6 +3275,8 @@ spec:
                                     type: boolean
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -3293,6 +3363,8 @@ spec:
                                   agentInject:
                                     type: boolean
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string
@@ -3381,6 +3453,8 @@ spec:
                                     type: boolean
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -3468,6 +3542,8 @@ spec:
                                     type: boolean
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -3554,6 +3630,8 @@ spec:
                                   agentInject:
                                     type: boolean
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string
@@ -3645,6 +3723,8 @@ spec:
                                     type: boolean
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -3731,6 +3811,8 @@ spec:
                                   agentInject:
                                     type: boolean
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string
@@ -3819,6 +3901,8 @@ spec:
                                     type: boolean
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -3905,6 +3989,8 @@ spec:
                                   agentInject:
                                     type: boolean
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string
@@ -3993,6 +4079,8 @@ spec:
                                     type: boolean
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -4080,6 +4168,8 @@ spec:
                                     type: boolean
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -4166,6 +4256,8 @@ spec:
                                   agentInject:
                                     type: boolean
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string

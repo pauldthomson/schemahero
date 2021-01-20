@@ -74,7 +74,11 @@ func (d *Database) getVaultConnection(ctx context.Context, clientset *kubernetes
 		return "", "", errors.Wrap(err, "failed to marshal login payload")
 	}
 
-	req, err := http.NewRequest("POST", fmt.Sprintf("%s/v1/auth/kubernetes/login", valueOrValueFrom.ValueFrom.Vault.Endpoint), bytes.NewReader(marshalledLoginBody))
+	k8sAuthEndpoint := "/v1/auth/kubernetes/login"
+	if valueOrValueFrom.ValueFrom.Vault.KubernetesAuthEndpoint != "" {
+		k8sAuthEndpoint = valueOrValueFrom.ValueFrom.Vault.KubernetesAuthEndpoint
+	}
+	req, err := http.NewRequest("POST", fmt.Sprintf("%s%s", valueOrValueFrom.ValueFrom.Vault.Endpoint, k8sAuthEndpoint), bytes.NewReader(marshalledLoginBody))
 	if err != nil {
 		return "", "", errors.Wrap(err, "failed to create login request")
 	}
