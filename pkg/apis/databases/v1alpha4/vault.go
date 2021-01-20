@@ -107,6 +107,11 @@ func (d *Database) GetVaultAnnotations() (map[string]string, error) {
 			template = fmt.Sprintf(`
 {{- with secret "database/creds/%s" -}}
 postgres://{{ .Data.username }}:{{ .Data.password }}@postgres:5432/%s{{- end }}`, v.Role, d.Name)
+		} else {
+			t = fmt.Sprintf(`
+{{- with secret "database/creds/%s" -}}
+%s`, v.Role, connTemplate)
+		}
 
 		case "mysql":
 			template = fmt.Sprintf(`

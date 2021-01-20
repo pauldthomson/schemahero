@@ -122,6 +122,8 @@ spec:
                                   type: string
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -211,6 +213,8 @@ spec:
                                   type: string
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -299,6 +303,8 @@ spec:
                                 connectionTemplate:
                                   type: string
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -395,6 +401,8 @@ spec:
                                   type: string
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -483,6 +491,8 @@ spec:
                                 connectionTemplate:
                                   type: string
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -573,6 +583,8 @@ spec:
                                   type: string
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -661,6 +673,8 @@ spec:
                                 connectionTemplate:
                                   type: string
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -751,6 +765,8 @@ spec:
                                   type: string
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -840,6 +856,8 @@ spec:
                                   type: string
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -928,6 +946,8 @@ spec:
                                 connectionTemplate:
                                   type: string
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -1023,6 +1043,8 @@ spec:
                                   type: string
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -1116,6 +1138,8 @@ spec:
                                   type: string
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -1204,6 +1228,8 @@ spec:
                                 connectionTemplate:
                                   type: string
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -1294,6 +1320,8 @@ spec:
                                   type: string
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -1383,6 +1411,8 @@ spec:
                                   type: string
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -1471,6 +1501,8 @@ spec:
                                 connectionTemplate:
                                   type: string
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -1564,6 +1596,8 @@ spec:
                                   type: string
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -1652,6 +1686,8 @@ spec:
                                 connectionTemplate:
                                   type: string
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -1742,6 +1778,8 @@ spec:
                                   type: string
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -1830,6 +1868,8 @@ spec:
                                 connectionTemplate:
                                   type: string
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -1920,6 +1960,8 @@ spec:
                                   type: string
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -2009,6 +2051,8 @@ spec:
                                   type: string
                                 endpoint:
                                   type: string
+                                kubernetesAuthEndpoint:
+                                  type: string
                                 role:
                                   type: string
                                 secret:
@@ -2097,6 +2141,8 @@ spec:
                                 connectionTemplate:
                                   type: string
                                 endpoint:
+                                  type: string
+                                kubernetesAuthEndpoint:
                                   type: string
                                 role:
                                   type: string
@@ -2283,6 +2329,8 @@ spec:
                                     type: string
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -2372,6 +2420,8 @@ spec:
                                     type: string
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -2460,6 +2510,8 @@ spec:
                                   connectionTemplate:
                                     type: string
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string
@@ -2556,6 +2608,8 @@ spec:
                                     type: string
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -2644,6 +2698,8 @@ spec:
                                   connectionTemplate:
                                     type: string
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string
@@ -2734,6 +2790,8 @@ spec:
                                     type: string
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -2822,6 +2880,8 @@ spec:
                                   connectionTemplate:
                                     type: string
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string
@@ -2912,6 +2972,8 @@ spec:
                                     type: string
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -3001,6 +3063,8 @@ spec:
                                     type: string
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -3089,6 +3153,8 @@ spec:
                                   connectionTemplate:
                                     type: string
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string
@@ -3184,6 +3250,8 @@ spec:
                                     type: string
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -3277,6 +3345,8 @@ spec:
                                     type: string
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -3365,6 +3435,8 @@ spec:
                                   connectionTemplate:
                                     type: string
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string
@@ -3455,6 +3527,8 @@ spec:
                                     type: string
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -3544,6 +3618,8 @@ spec:
                                     type: string
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -3632,6 +3708,8 @@ spec:
                                   connectionTemplate:
                                     type: string
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string
@@ -3725,6 +3803,8 @@ spec:
                                     type: string
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -3813,6 +3893,8 @@ spec:
                                   connectionTemplate:
                                     type: string
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string
@@ -3903,6 +3985,8 @@ spec:
                                     type: string
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -3991,6 +4075,8 @@ spec:
                                   connectionTemplate:
                                     type: string
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string
@@ -4081,6 +4167,8 @@ spec:
                                     type: string
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -4170,6 +4258,8 @@ spec:
                                     type: string
                                   endpoint:
                                     type: string
+                                  kubernetesAuthEndpoint:
+                                    type: string
                                   role:
                                     type: string
                                   secret:
@@ -4258,6 +4348,8 @@ spec:
                                   connectionTemplate:
                                     type: string
                                   endpoint:
+                                    type: string
+                                  kubernetesAuthEndpoint:
                                     type: string
                                   role:
                                     type: string

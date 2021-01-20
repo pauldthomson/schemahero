@@ -28,6 +28,7 @@ type Vault struct {
 	ServiceAccount          string `json:"serviceAccount,omitempty" yaml:"serviceAccount,omitempty"`
 	ServiceAccountNamespace string `json:"serviceAccountNamespace,omitempty" yaml:"serviceAccountNamespace,omitempty"`
 	ConnectionTemplate      string `json:"connectionTemplate,omitempty" yaml:"connectionTemplate,omitempty"`
+	KubernetesAuthEndpoint  string `json:"kubernetesAuthEndpoint,omitempty" yaml:"kubernetesAuthEndpoint,omitempty"`
 }
 
 type SSM struct {
