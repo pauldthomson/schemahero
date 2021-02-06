@@ -17,13 +17,13 @@ require (
 	github.com/spf13/cobra v0.0.5
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.4.0
-	github.com/stretchr/testify v1.5.1
+	github.com/stretchr/testify v1.6.1
 	github.com/xo/dburl v0.0.0-20200124232849-e9ec94f52bc3
 	go.uber.org/zap v1.10.0
 	gopkg.in/yaml.v2 v2.2.8
-	k8s.io/api v0.18.0
+	k8s.io/api v0.20.2
 	k8s.io/apiextensions-apiserver v0.18.0
-	k8s.io/apimachinery v0.18.0
+	k8s.io/apimachinery v0.20.2
 	k8s.io/cli-runtime v0.18.0
 	k8s.io/client-go v0.18.0
 	sigs.k8s.io/controller-runtime v0.5.1-0.20200402191424-df180accb901
