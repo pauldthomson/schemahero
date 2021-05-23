@@ -3,7 +3,7 @@ module github.com/schemahero/schemahero
 go 1.15
 
 require (
-	github.com/aws/aws-sdk-go v1.38.36
+	github.com/aws/aws-sdk-go-v2 v1.4.0
 	github.com/aws/aws-sdk-go-v2/config v1.1.3
 	github.com/aws/aws-sdk-go-v2/credentials v1.1.7
 	github.com/aws/aws-sdk-go-v2/service/ssm v1.2.0
@@ -23,7 +23,7 @@ require (
 	gopkg.in/yaml.v2 v2.4.0
 	k8s.io/api v0.20.5
 	k8s.io/apiextensions-apiserver v0.20.5
-	k8s.io/apimachinery v0.20.5
+	k8s.io/apimachinery v0.21.1
 	k8s.io/cli-runtime v0.20.5
 	k8s.io/client-go v0.20.5
 	sigs.k8s.io/controller-runtime v0.8.3
